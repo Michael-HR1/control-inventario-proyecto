@@ -1,0 +1,169 @@
+
+/* --------------------------- OPTIONES DE GENERO --------------------------- */
+/* Titulo */
+.genero-title{
+  font-size: 1.3rem;
+  color: rgb(139, 139, 139);
+  margin-left: -11rem; /* Ajusta el valor según sea necesario */
+  margin-top: 20px;
+
+}
+
+/* General */
+.option-m-h{
+    display: flex;
+    margin: 0 auto;
+}
+/* optiones */
+.radio-button {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px;
+    margin-top: 1.5rem;
+    position: relative;
+    align-items: center;
+    color: rgb(151, 151, 151);
+  }
+  
+  .radio-button input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .radio {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transform: translateZ(-25px);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .radio::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Cambiar colores según el valor */
+  .radio-button input[type="radio"]:checked[value="1"] + .radio {
+    border-color: #65c0fc; /* Verde */
+    background-color: #c7e9ff;
+  }
+  
+  .radio-button input[type="radio"]:checked[value="1"] + .radio::before {
+    opacity: 1;
+    background-color: #fff;
+  }
+  
+  .radio-button input[type="radio"]:checked[value="2"] + .radio {
+    border-color: rgb(255, 59, 213); /* Rojo */
+    background-color: #f1b7e5;
+  }
+  
+  .radio-button input[type="radio"]:checked[value="2"] + .radio::before {
+    opacity: 1;
+    background-color: #fff;
+  }
+
+  /* ------------------------ ICONOS DE REDES SOCIALES ------------------------ */
+  /* From Uiverse.io by david-mohseni */ 
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+  
